@@ -1,16 +1,19 @@
 # Rolling Average Number API 📊
 
-A small Express API that requests number sequences from an upstream service, maintains a rolling window of up to 10 unique numbers, and returns the updated window and average.
+A Node.js and Express API that retrieves number sequences, maintains a rolling window of unique values, and calculates the current average.
 
 ## ✨ Features
 
-- Prime, Fibonacci, even, and random number endpoints
-- Upstream HTTP data fetching
+- Prime number endpoint
+- Fibonacci number endpoint
+- Even number endpoint
+- Random number endpoint
+- Upstream API integration
 - Duplicate filtering
 - Rolling window of 10 values
-- Previous/current window state
+- Previous and current window state
 - Average calculation
-- Fallback sample data when the upstream service is unavailable
+- Fallback data handling
 
 ## 🛠️ Tech Stack
 
@@ -18,7 +21,7 @@ A small Express API that requests number sequences from an upstream service, mai
 - Express
 - Axios
 
-## 🔌 API
+## 🔌 API Endpoints
 
 ```http
 GET /numbers/p
@@ -27,11 +30,9 @@ GET /numbers/e
 GET /numbers/r
 ```
 
-The API listens on port `9876` and returns `windowPrevState`, `windowCurrState`, `numbers`, and `avg`.
+The API runs on port `9876` and returns the previous window, current window, received numbers, and calculated average.
 
 ## 🚀 Run Locally
-
-The current application is nested under `f/average-calculator/average-calculator/`:
 
 ```bash
 cd f/average-calculator/average-calculator
@@ -39,15 +40,10 @@ npm install
 node index.js
 ```
 
-Then try `http://localhost:9876/numbers/p`.
-
-## 📌 Cleanup Before Showcasing
-
-- Move the application to the repository root or clearly document the nested path.
-- Keep `node_modules` out of Git.
-- Add start scripts and project metadata where appropriate.
-- Consider renaming the repository to match the actual project.
+Then open `http://localhost:9876/numbers/p`.
 
 ## 👨‍💻 Author
 
-[Varshith Gorrepati](https://github.com/VARSHITHGORREPATI)
+**Varshith Gorrepati**
+
+[GitHub](https://github.com/VARSHITHGORREPATI) · [LinkedIn](https://www.linkedin.com/in/gorrepativarshith/)
